@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "daitos.gpu-temp",
+  "name": "GPU Temp",
+  "version": "2026.10.06",
+  "author": "daitos",
+  "license": "MIT",
+  "description": "GPU temperatures for all active NVIDIA GPUs via nvidia-smi.",
+  "kinds": ["bar-widget"],
+  "activation": "on-load",
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "GPU Temp",
+    "description": "GPU temperatures for all active GPUs.",
+    "category": "System",
+    "aliases": ["gpu", "gputemp", "temps", "gpu-temp"],
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {},
+    "schema": [
+      {
+        "key": "tempUnit",
+        "type": "enum",
+        "label": "Temperature unit",
+        "options": ["C", "F"],
+        "defaultValue": "C"
+      }
+    ],
+    "hasPanel": true
+  },
+  "settings": {}
+}
